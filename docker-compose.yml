@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  server:
+    build: ./server
+    container_name: brew-haven-server
+    ports:
+      - "8000:8000"
+
+  client:
+    build: ./client
+    container_name: brew-haven-client
+    ports:
+      - "8501:8501"
+    depends_on:
+      - server
+    environment:
+      - API_URL=http://server:8000
