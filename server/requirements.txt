@@ -98,3 +98,4 @@ urllib3==2.5.0
 uvicorn==0.30.6
 watchdog==5.0.3
 yarl==1.22.0
+gunicorn
